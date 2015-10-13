@@ -1,6 +1,7 @@
 " Required:
 " https://github.com/gmarik/Vundle.vim
 " Also read this: https://github.com/itchyny/lightline.vim
+" After installing powerline fonts, change terminal font to Powerline font
 
 
 set nocompatible              " be iMproved, required
