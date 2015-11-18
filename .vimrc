@@ -1,6 +1,8 @@
 " Required:
 " https://github.com/gmarik/Vundle.vim
 " Also read this: https://github.com/itchyny/lightline.vim
+" And Tmuxline
+" https://github.com/edkolev/tmuxline.vim
 
 
 set nocompatible              " be iMproved, required
@@ -30,6 +32,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'user/L9', {'name': 'newL9'}
 " Lightline
 Plugin 'itchyny/lightline.vim'
+" TmuxLine
+Plugin 'edkolev/tmuxline.vim'
 " Vim CSS color
 Plugin 'skammer/vim-css-color'
 " NerdTREE
@@ -47,6 +51,7 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -90,7 +95,6 @@ let g:lightline = {
     \ }
 
 " Configure NERDTree
-autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
