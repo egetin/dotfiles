@@ -3,7 +3,7 @@
 " Also read this: https://github.com/itchyny/lightline.vim
 " And Tmuxline
 " https://github.com/edkolev/tmuxline.vim
-
+" After installing powerline fonts, change terminal font to Powerline font
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
