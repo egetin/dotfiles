@@ -127,6 +127,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle # mute mic
+bindsym mod1+v exec playerctl play-pause
+bindsym mod1+b exec playerctl previous
+bindsym mod1+n exec playerctl next
 
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5% # Increase brightness
