@@ -1,6 +1,8 @@
 " Required:
 " https://github.com/gmarik/Vundle.vim
 " Also read this: https://github.com/itchyny/lightline.vim
+" Get these fonts:
+" https://github.com/powerline/fonts
 " And Tmuxline
 " https://github.com/edkolev/tmuxline.vim
 " After installing powerline fonts, change terminal font to Powerline font
