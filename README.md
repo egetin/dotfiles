@@ -1,6 +1,9 @@
 Dotfiles
 =======
 
+Single requirements:
+ * i3-dmenu-desktop
+
 i3lock
 -----
 
