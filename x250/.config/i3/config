@@ -49,10 +49,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -134,6 +134,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5% # Decrease bri
 
 # Change kb layout
 bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap fi || setxkbmap us
+
+# i3lock conf
+bindsym $mod+l exec ~/.local/bin/lock-screen.sh
+exec xautolock -time 1 -locker '~/.local/bin/lock-screen.sh' &
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
