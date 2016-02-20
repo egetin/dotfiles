@@ -1,5 +1,9 @@
-= Dotfiles =
-== i3lock ==
-Requirements:
-* ImageMagick
-* xautolock
+Dotfiles
+=======
+
+i3lock
+-----
+
+**Requirements:**
+ * ImageMagick
+ * xautolock
