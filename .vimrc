@@ -41,8 +41,10 @@ Plugin 'skammer/vim-css-color'
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Go vim plugin
+" Go
 Plugin 'fatih/vim-go'
+" ES7 syntax
+Plugin 'othree/yajs.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,6 +64,7 @@ filetype plugin indent on    " required
 
 " Line numbers
 set number
+set relativenumber
 " Syntax highlighting
 syntax on
 " Cursor highlighting
@@ -89,6 +92,10 @@ if !has('gui_running')
     set t_Co=256
 endif
 
+" Configure moving across lines
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
 let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ 'component': {
@@ -102,11 +109,7 @@ let g:lightline = {
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
-" Configure tab shortcuts
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
-
-" Go indentation
-au FileType go setl shiftwidth=4 softtabstop=4
+" Special indentation for Go
+autocmd FileType go setlocal noexpandtab
+autocmd FileType go setlocal shiftwidth=8
+autocmd FileType go setlocal softtabstop=8
