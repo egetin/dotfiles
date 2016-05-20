@@ -43,6 +43,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Go
 Plugin 'fatih/vim-go'
+" Faster YAML syntax
+Plugin 'stephpy/vim-yaml'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
 
