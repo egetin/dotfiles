@@ -47,6 +47,8 @@ Plugin 'fatih/vim-go'
 Plugin 'stephpy/vim-yaml'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
+" EditorConfig
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
