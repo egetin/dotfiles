@@ -6,6 +6,8 @@
 " And Tmuxline
 " https://github.com/edkolev/tmuxline.vim
 " After installing powerline fonts, change terminal font to Powerline font
+"
+" Install goimports https://godoc.org/golang.org/x/tools/cmd/goimports
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -115,3 +117,6 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd FileType go setlocal noexpandtab
 autocmd FileType go setlocal shiftwidth=8
 autocmd FileType go setlocal softtabstop=8
+
+" Goimport instead of gofmt
+let g:go_fmt_command = "goimports"
