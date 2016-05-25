@@ -49,6 +49,8 @@ Plugin 'fatih/vim-go'
 Plugin 'stephpy/vim-yaml'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
+" EditorConfig
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,6 +101,9 @@ endif
 " Configure moving across lines
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" Set mouse support
+set mouse=a
 
 let g:lightline = {
     \ 'colorscheme': 'wombat',
