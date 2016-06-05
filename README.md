@@ -3,6 +3,7 @@ Dotfiles
 
 Single requirements:
  * i3-dmenu-desktop
+ * blueman
 
 i3lock
 -----
