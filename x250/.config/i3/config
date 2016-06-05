@@ -140,7 +140,13 @@ bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbma
 
 # i3lock conf
 bindsym $mod+l exec ~/.local/bin/lock-screen.sh
-exec xautolock -time 1 -locker '~/.local/bin/lock-screen.sh' &
+exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
+
+# Print screen
+bindsym XF86Display exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f' --release
+
+# Bluetooth control
+exec blueman-applet
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
