@@ -103,7 +103,7 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Set mouse support
-set mouse=a
+" set mouse=a
 
 let g:lightline = {
     \ 'colorscheme': 'wombat',
@@ -125,3 +125,9 @@ autocmd FileType go setlocal softtabstop=8
 
 " Goimport instead of gofmt
 let g:go_fmt_command = "goimports"
+
+" Disable search highlight
+set nohlsearch
+
+" Enable advanced tag support
+runtime macros/matchit.vim
