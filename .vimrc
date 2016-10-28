@@ -27,8 +27,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'vim-scripts/L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -53,6 +51,8 @@ Plugin 'othree/yajs.vim'
 Plugin 'editorconfig/editorconfig-vim'
 " CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
+" Quick scope
+Plugin 'unblevable/quick-scope'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -140,3 +140,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.swo,*.zip     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+
+" Quick scope configs
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
