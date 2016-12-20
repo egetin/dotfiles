@@ -37,7 +37,7 @@ Plugin 'itchyny/lightline.vim'
 " TmuxLine
 Plugin 'edkolev/tmuxline.vim'
 " Vim CSS color
-Plugin 'skammer/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -45,6 +45,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'fatih/vim-go'
 " Faster YAML syntax
 Plugin 'stephpy/vim-yaml'
+" Javascript highlighting
+Plugin 'pangloss/vim-javascript'
+" JSX syntax
+Plugin 'mxw/vim-jsx'
+" SCSS
+Plugin 'cakebaker/scss-syntax.vim'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
 " EditorConfig
@@ -53,6 +59,9 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Quick scope
 Plugin 'unblevable/quick-scope'
+" Rails.vim
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
