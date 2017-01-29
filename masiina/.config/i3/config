@@ -193,7 +193,7 @@ assign [class="Gnome-terminal"] $1
 
 # Autostart certain applications
 exec spotify
-exec gnome-terminal -e "tmux -2"
+exec roxterm
 exec google-chrome
 exec /home/erkka/Downloads/Telegram/Telegram
 
