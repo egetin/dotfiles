@@ -1,6 +1,10 @@
 Dotfiles
 =======
 
+All the basic config files for my mainly used computers.
+Fish shell should be preferred over bash but I'll keep the old .bashrc here for
+possible future needs.
+
 Single requirements:
  * i3-dmenu-desktop
  * blueman
