@@ -153,3 +153,6 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 " Quick scope configs
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Save policy to get Webpack Dev Server recognize file changes
+set backupcopy=yes
