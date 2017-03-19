@@ -26,20 +26,24 @@ Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
+
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'vim-scripts/L9'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
+
 " Lightline
 Plugin 'itchyny/lightline.vim'
 " TmuxLine
 Plugin 'edkolev/tmuxline.vim'
-" Vim CSS color
+" SCSS
+Plugin 'cakebaker/scss-syntax.vim'
+" Vim CSS color (also recommended for scss plugin)
 Plugin 'hail2u/vim-css3-syntax'
 " NerdTREE
 Plugin 'scrooloose/nerdtree'
@@ -52,14 +56,10 @@ Plugin 'stephpy/vim-yaml'
 Plugin 'pangloss/vim-javascript'
 " JSX syntax
 Plugin 'mxw/vim-jsx'
-" SCSS
-Plugin 'cakebaker/scss-syntax.vim'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
 " EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
-" CtrlP
-Plugin 'ctrlpvim/ctrlp.vim'
 " Quick scope
 Plugin 'unblevable/quick-scope'
 " Rails.vim
@@ -147,16 +147,6 @@ let g:go_fmt_command = "goimports"
 
 " Disable search highlight
 set nohlsearch
-
-" CtrlP configs
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.swo,*.zip     " MacOSX/Linux
-
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 
 " Quick scope configs
 " Trigger a highlight in the appropriate direction when pressing these keys:
