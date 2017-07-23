@@ -8,6 +8,8 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# Masiina spesific config
 
 set $mod Mod4
 
@@ -132,7 +134,9 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle -q # mute so
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym mod1+v exec playerctl play-pause
 bindsym mod1+b exec playerctl previous
+bindsym XF86AudioPrev exec playerctl previous
 bindsym mod1+n exec playerctl next
+bindsym XF86AudioNext exec playerctl next
 bindsym XF86HomePage exec google-chrome
 bindsym XF86Music exec spotify-client
 
