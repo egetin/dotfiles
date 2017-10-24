@@ -58,6 +58,10 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " ES7 syntax
 Plugin 'othree/yajs.vim'
+" Coffeescript
+Plugin 'kchmck/vim-coffee-script'
+" Typescript
+Plugin 'leafgarland/typescript-vim'
 " EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
 " Quick scope
@@ -153,6 +157,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
+
+" Detect .gohtml as a Go HTML template
+au BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
 
 " Disable search highlight
 set nohlsearch
