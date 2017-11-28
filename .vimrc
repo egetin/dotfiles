@@ -71,6 +71,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 " Syntastic for linting
 Plugin 'vim-syntastic/syntastic'
+" CtrlP
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,3 +195,6 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+" CtrlP config
+let g:ctrlp_max_files = 0
