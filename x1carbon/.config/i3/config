@@ -19,7 +19,7 @@ set $mod Mod4
 exec xinput --set-prop 11 "Device Enabled" 0
 
 # Set keyboard layout to us by default
-setxkbmap us
+exec setxkbmap us
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
