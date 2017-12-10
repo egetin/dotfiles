@@ -15,7 +15,7 @@ set $mod Mod4
 
 # Workspaces
 set $1 1: term
-set $2 2: chrome
+set $2 2: firefox
 set $3 3: telegram
 set $4 4: spotify
 
@@ -24,7 +24,7 @@ set $4 4: spotify
 #font pango:monospace 8
 
 # Set keyboard layout to us by default
-setxkbmap us
+exec setxkbmap fi
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -191,15 +191,17 @@ workspace "$2" output DVI-D-0
 workspace "$3" output DVI-I-1
 workspace "$4" output DVI-D-0
 
-assign [class="Google-chrome"] $2
+assign [class="Firefox"] $2
 assign [class="TelegramDesktop"] $3
 assign [class="Gnome-terminal"] $1
+assign [class="Roxterm"] $1
 
 # Autostart certain applications
 exec spotify
 exec roxterm
-exec google-chrome
+exec firefox
 exec /home/erkka/Downloads/Telegram/Telegram
+exec blueman-applet
 
 # Special config for Spotify
 for_window [class="^Spotify$"] move to workspace $4
