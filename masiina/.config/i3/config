@@ -199,7 +199,7 @@ assign [class="Roxterm"] $1
 # Autostart certain applications
 exec spotify
 exec roxterm
-exec google-chrome
+exec google-chrome-stable
 exec /home/erkka/Downloads/Telegram/Telegram
 exec blueman-applet
 
