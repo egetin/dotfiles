@@ -149,8 +149,8 @@ bindsym $mod+l exec ~/.local/bin/lock-screen.sh
 exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
 
 # Print screen
-bindsym --release Print exec scrot '~/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
-bindsym --release $mod+Print exec scrot '~/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
+bindsym --release Print exec scrot '/home/emak/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release $mod+Print exec scrot '/home/emak/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
 
 # Bluetooth control
 exec blueman-applet
