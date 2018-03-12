@@ -133,11 +133,13 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle # mute m
 bindsym mod1+v exec playerctl play-pause
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym mod1+b exec playerctl previous
+bindsym XF86AudioPrev exec playerctl previous
 bindsym mod1+n exec playerctl next
+bindsym XF86AudioNext exec playerctl next
 
 # Brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +5% # Increase brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -5% # Decrease brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +1% # Increase brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -1% # Decrease brightness
 
 # Change kb layout
 bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap fi || setxkbmap us
@@ -147,7 +149,8 @@ bindsym $mod+l exec ~/.local/bin/lock-screen.sh
 exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
 
 # Print screen
-bindsym XF86Display exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f' --release
+bindsym --release Print exec scrot '~/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release $mod+Print exec scrot '~/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
 
 # Bluetooth control
 exec blueman-applet
