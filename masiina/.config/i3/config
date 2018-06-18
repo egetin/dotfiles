@@ -146,6 +146,10 @@ bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbma
 # i3lock conf
 bindsym $mod+l exec ~/.local/bin/lock-screen.sh
 
+# Screenshot bindings
+bindsym --release Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release $mod+Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
