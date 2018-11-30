@@ -73,6 +73,10 @@ Plugin 'tpope/vim-bundler'
 Plugin 'vim-syntastic/syntastic'
 " CtrlP
 Plugin 'ctrlpvim/ctrlp.vim'
+" Terraform plugin
+Plugin 'hashivim/vim-terraform'
+" Terraform HCL format
+Plugin 'fatih/vim-hclfmt'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -198,3 +202,7 @@ highlight link SyntasticStyleWarningSign SignColumn
 
 " CtrlP config
 let g:ctrlp_max_files = 0
+
+" Terraform config
+let g:terraform_align=1
+let g:terraform_commentstring='//%s'
