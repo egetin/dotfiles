@@ -16,7 +16,7 @@ set $mod Mod4
 #font pango:monospace 8
 
 # Disable touchpad
-exec xinput --set-prop 11 "Device Enabled" 0
+exec xinput --set-prop "Synaptics TM3289-002" "Device Enabled" 0
 
 # Set keyboard layout to us by default
 exec setxkbmap us
