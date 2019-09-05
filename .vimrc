@@ -125,6 +125,9 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Search selected text with //
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+
 " Lightline config
 set laststatus=2
 set noshowmode
