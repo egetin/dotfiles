@@ -62,6 +62,7 @@ Plugin 'othree/yajs.vim'
 Plugin 'kchmck/vim-coffee-script'
 " Typescript
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ianks/vim-tsx'
 " EditorConfig
 Plugin 'editorconfig/editorconfig-vim'
 " Quick scope
@@ -79,6 +80,8 @@ Plugin 'hashivim/vim-terraform'
 Plugin 'fatih/vim-hclfmt'
 " Rust support
 Plugin 'rust-lang/rust.vim'
+" Prettier plugin
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -177,7 +180,7 @@ set nohlsearch
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Save policy to get Webpack Dev Server recognize file changes
-set backupcopy=yes
+"set backupcopy=yes
 
 " Syntastic config
 set statusline+=%#warningmsg#
@@ -190,6 +193,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_python_checkers = ['flake8']
 
 let g:syntastic_error_symbol = '❌'
@@ -211,3 +215,7 @@ let g:terraform_commentstring='//%s'
 
 " Rust config
 let g:rustfmt_autosave = 1
+
+" Prettier config
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync

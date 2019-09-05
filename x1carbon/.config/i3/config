@@ -138,8 +138,8 @@ bindsym mod1+n exec playerctl next
 bindsym XF86AudioNext exec playerctl next
 
 # Brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +1% # Increase brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -1% # Decrease brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +1% -time 1 # Increase brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -1% -time 1 # Decrease brightness
 
 # Change kb layout
 bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap fi || setxkbmap us
