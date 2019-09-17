@@ -11,6 +11,8 @@
 "
 " ESLint for Vim requires some config, look here:
 " https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor
+" TSLint and Typescript are also required to be installed globally for
+" automatic linting purposes
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
