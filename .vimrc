@@ -130,6 +130,21 @@ set softtabstop=2
 " Search selected text with //
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
+" Remember earlier positions in files
+set viminfo='50,\"100,:20,%,n~/.viminfo
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
 " Lightline config
 set laststatus=2
 set noshowmode
