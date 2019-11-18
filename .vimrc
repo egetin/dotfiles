@@ -86,6 +86,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'prettier/vim-prettier'
 " Remember last position in file
 Plugin 'farmergreg/vim-lastplace'
+" Purescript support
+Plugin 'purescript-contrib/purescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
