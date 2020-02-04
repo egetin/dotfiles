@@ -149,11 +149,14 @@ bindsym $mod+l exec ~/.local/bin/lock-screen.sh
 exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
 
 # Print screen
-bindsym --release Print exec scrot '/home/emak/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
-bindsym --release $mod+Print exec scrot '/home/emak/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
+bindsym --release Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release $mod+Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
 
 # Bluetooth control
 exec blueman-applet
+
+# Toggl hour logging
+exec TogglDesktop
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -192,5 +195,5 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+#        tray_output primary
 }
