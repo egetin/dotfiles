@@ -14,8 +14,8 @@
 set $mod Mod4
 
 # Workspaces
-set $1 1: term
-set $2 2: chrome
+set $1 1: firefox
+set $2 2: term
 set $3 3: telegram
 set $4 4: spotify
 
@@ -145,10 +145,13 @@ bindsym $mod+space exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbma
 
 # i3lock conf
 bindsym $mod+l exec ~/.local/bin/lock-screen.sh
+#exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
 
 # Screenshot bindings
 bindsym --release Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release Shift+Print exec scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 bindsym --release $mod+Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
+bindsym --release $mod+Shift+Print exec scrot '/tmp/%F_%T_$wx$h.png' -s -e 'xclip -selection clipboard -target image/png -i $f'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -190,20 +193,20 @@ bar {
 }
 
 # Bind specific workspaces on correct screens
-workspace "$1" output DVI-I-1
-workspace "$2" output DVI-D-0
-workspace "$3" output DVI-I-1
-workspace "$4" output DVI-D-0
+workspace "$1" output DP-0
+workspace "$2" output DP-4
+workspace "$3" output DP-4
+workspace "$4" output DP-4
 
-assign [class="Google-chrome"] $2
+assign [class="firefox"] $1
 assign [class="TelegramDesktop"] $3
-assign [class="Gnome-terminal"] $1
-assign [class="Roxterm"] $1
+assign [class="Gnome-terminal"] $2
+assign [class="Roxterm"] $2
 
 # Autostart certain applications
 exec spotify
 exec roxterm
-exec google-chrome-stable
+exec firefox
 exec /home/erkka/Downloads/Telegram/Telegram
 exec blueman-applet
 
