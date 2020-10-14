@@ -150,7 +150,9 @@ exec xautolock -time 5 -locker '~/.local/bin/lock-screen.sh' &
 
 # Print screen
 bindsym --release Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png'
+bindsym --release Shift+Print exec scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'
 bindsym --release $mod+Print exec scrot '/home/erkka/Pictures/Screenshots/%Y-%m-%d-%H%M%S_$wx$h.png' -s
+bindsym --release $mod+Shift+Print exec scrot '/tmp/%F_%T_$wx$h.png' -s -e 'xclip -selection clipboard -target image/png -i $f'
 
 # Bluetooth control
 exec blueman-applet
