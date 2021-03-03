@@ -9,6 +9,8 @@ Single requirements:
  * i3-dmenu-desktop
  * blueman
  * nm-applet / network-manager-applet (Fedora)
+ * scrot
+ * xclip
 
 i3lock
 -----

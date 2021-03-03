@@ -223,6 +223,7 @@ let g:ctrlp_max_files = 0
 " Terraform config
 let g:terraform_align=1
 let g:terraform_commentstring='//%s'
+let g:terraform_fmt_on_save=1
 
 " Rust config
 let g:rustfmt_autosave = 1
